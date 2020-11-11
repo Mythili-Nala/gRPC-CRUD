@@ -6,11 +6,6 @@ import (
 	"log"
 	"net"
 	"os"
-
-	database "github.com/alifudin-a/grpc-pg-crud/database"
-	model "github.com/alifudin-a/grpc-pg-crud/database/model"
-	_ "github.com/alifudin-a/grpc-pg-crud/database/pq"
-	prdgpb "github.com/alifudin-a/grpc-pg-crud/proto"
 	"github.com/jmoiron/sqlx"
 	"google.golang.org/grpc"
 )
