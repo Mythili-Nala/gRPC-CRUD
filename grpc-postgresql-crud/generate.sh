@@ -1,0 +1,1 @@
+protoc proto/product_group.proto --go_out=plugins=grpc:.

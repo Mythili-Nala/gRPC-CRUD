@@ -1,0 +1,59 @@
+syntax = "proto3";
+package proto;
+option go_package = "protopb";
+
+message ProductGroup {
+    int32 id = 1;
+    string name = 2;
+    string created_at = 3;
+    string updated_at = 4;
+}
+
+message CreateProductReq {
+    ProductGroup product = 1;
+}
+
+message CreateProductRes {
+    ProductGroup product = 1;
+}
+
+message ReadProductReq {
+    int32 id = 1;
+}
+
+message ReadProductRes {
+    ProductGroup product = 1;
+}
+
+message UpdateProductReq {
+    ProductGroup product = 1;
+}
+
+message UpdateProductRes {
+    ProductGroup product = 1;
+}
+
+message DeleteProductReq {
+    int32 id = 1;
+}
+
+message DeleteProductRes {
+    bool del = 1;
+}
+
+message ListProductReq {
+    int32 limit = 1;
+    int32 offset = 2;
+}
+
+message ListProductRes {
+    repeated ProductGroup products = 1;
+}
+
+service ProductService {
+    rpc CreateProductGroup(CreateProductReq) returns (CreateProductRes){};
+    rpc ReadProductGroup(ReadProductReq) returns (ReadProductRes){};
+    rpc UpdateProductGroup(UpdateProductReq) returns (UpdateProductRes){};
+    rpc DeleteProductGroup(DeleteProductReq) returns (DeleteProductRes){};
+    rpc ListProductGroup(ListProductReq) returns (ListProductRes){};
+}
