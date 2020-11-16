@@ -1,4 +1,3 @@
-module github.com/alifudin-a/grpc-pg-crud
 
 go 1.13
 
